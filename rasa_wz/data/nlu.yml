@@ -1,0 +1,264 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - 你好
+    - 早上好
+    - 晚上好
+    - 下午好
+    - 嗨
+    - 你好呀
+    - 嗨呀
+    - 你好呀
+    - 您好呀
+    - 很高兴认识你
+    - 很高兴见到你
+    - 很高兴见到您
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - 再见
+    - 下次再见
+    - 下次见
+    - 下次聊
+    - 下次再聊
+    - 下次再聊
+    - 拜拜
+    - 拜拜呀
+    
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - 是的
+    - 当然
+    - 嗯
+    - 嗯嗯嗯
+    - 呃呃呃
+    - 额额额
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - 真的是这样嘛
+    - 不是这样吧
+    - 我有点怀疑
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - 好
+    - 非常好
+    - 非常好
+    - 非常棒
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - 这样真的不行，我有点不开心了
+    - 我有点不开心了
+    - 我有点悲伤了
+    
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - 你是机器人嘛
+
+- intent: inform    
+  examples: |
+    -我想买一台笔记本电脑
+    -我要买笔记本
+    -有没有笔记本买
+
+- intent: 具体预算
+  examples: |
+    -我的预算是[6000](budget)块
+    -我的预算是[9000](budget)元
+    -我想买[6000](budget)的笔记本
+    -我想买[6000](budget)得电脑
+    -我的预算是 [5000](budget)
+    -我准备花 [6000元](budget) 买笔记本
+    -预算 [6k](budget)
+    -我的预算有 [1000块](budget)
+    -我想花 [2000美元](budget) 买电脑
+
+
+- intent: 商品查询
+  examples: |
+    -你们有没有X商品？
+    -我想买X，有吗？
+    -X的库存还有吗？
+    -X的价格是多少？
+    -请问有X这个东西买嘛？
+    -我想买这个东西，请问有嘛？
+    -我想买我上面所描述的信息的这些东西，请问有嘛？
+
+- intent: 下单相关
+  examples: |
+    -我想要下单购买X
+    -怎样下单购买X？
+    -如何购买X？
+    -能帮我下单X吗？
+    -我想买这个东西，能帮我购买嘛
+
+- intent: 配送
+  examples: |
+    -你们提供送货服务吗？
+    -送货需要多久？
+    -多久可以收到货？
+    -你们送货范围是哪些地方？
+    -你们的产品一般多久可以送到？
+    -我可以选择快递吗？有什么不同的选择？
+    -你们的产品送货有额外费用吗？
+    
+
+- intent: 支付
+  examples: |
+    -可以使用什么支付方式？
+    -运费是多少？
+    -可以货到付款嘛
+
+- intent: 退换货
+  examples: |
+    -如果不满意可以退货吗？
+    -如何退货？
+    -可以换货吗？
+    -我收到的商品有问题，怎么办？
+    -如果我不满意产品，可以退货吗？
+    -如果产品有问题，可以换货吗？
+    -我需要如何进行退货？
+
+- intent: 促销和优惠
+  examples: |
+    -有没有正在进行的促销活动？
+    -可以使用优惠券吗？
+    -怎样获得折扣？
+    -有没有新客户优惠？
+
+- intent: 订单状态查询
+  examples: |
+    -我可以查一下我的订单状态吗？
+    -我可以知道订单发货了吗？
+    -能告诉我订单什么时候能送达？
+    -订单还没有更新，怎么办？
+
+- intent: 产品比较
+  examples: |
+    -X产品和Y产品有什么区别？
+    -我应该选择X还是Y？
+    -哪个产品更适合我的需求？
+    -能帮我比较一下X和Z的功能吗？
+    -X型号和Y型号有什么不同？
+
+- intent: 技术支持
+  examples: |
+    -产品使用时出了问题怎么办？
+    -产品的技术规格在哪里可以找到？
+    -如何联系技术支持团队？
+    -你们提供产品的保修吗？
+    -产品保修期是多久？
+    -我可以在什么时间联系到客服？
+    -你们提供哪些客户支持服务？
+    -如果我遇到问题，如何解决？
+
+
+
+- intent: 产品价格查询
+  examples: |
+    -你们的产品价格是固定的吗？
+    -你们的产品定价是怎么做的？
+    -你们的产品价格可以商量吗？
+
+- intent: 产品功能和特点
+  examples: |
+    -你们的产品有哪些特别的功能？
+    -我可以期待产品有哪些创新点？
+    -有没有推荐的产品适合特定的使用场景？
+    -你们的产品有哪些特别的功能？
+    -这个产品有什么功能特点嘛
+    -它有什么特点？
+    -有什么特别的功能嘛
+    -你们产品的主要技术规格是什么？
+    -产品的性能如何？有哪些关键指标？
+    -支持的技术标准有哪些？
+
+- intent: 产品比较和竞争优势
+  examples: |
+    -你们的产品和市场上其他产品有什么不同？
+    -为什么选择你们的产品而不是竞争对手的？
+    -你们的产品有什么独特的竞争优势？
+    -为什么选择你们的产品而不是其他的品牌？
+
+- intent: 新产品发布和未来计划
+  examples: |
+    -你们有计划推出新产品吗？
+    -未来几个月内可以期待哪些新的产品？
+    -什么时候会出新的产品
+    -你们有计划推出新产品吗？
+    -未来几个月内可以期待哪些新的产品？
+    -什么时候会出新的产品？

@@ -1,0 +1,34 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+#询问预算
+- rule: Activate budget form
+  steps:
+  - intent: inform
+  - action: budget_form
+  - active_loop: budget_form
+
+
+
+- rule: deactivate  budget form
+  condition:
+  - active_loop: budget_form
+  steps:
+  - action: budget_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_answer_budget
+  - action: action_hello_world

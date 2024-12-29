@@ -1,0 +1,104 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: 多轮问询示例
+  steps:
+  - intent: greet
+  - action: utter_greet
+  # - intent: inform
+  # - action: utter_answer_inform
+
+
+
+- story: 商品查询故事
+  steps:
+  - intent: 商品查询
+  - action: utter_商品查询
+  
+- story: 下单相关故事
+  steps:
+  - intent: 下单相关
+  - action: utter_下单相关
+
+- story: 配送故事
+  steps:
+  - intent: 配送
+  - action: utter_配送
+
+- story: 支付故事
+  steps:
+  - intent: 支付
+  - action: utter_支付
+
+- story: 退换货故事
+  steps:
+  - intent: 退换货
+  - action: utter_退换货
+
+- story: 促销和优惠故事
+  steps:
+  - intent: 促销和优惠
+  - action: utter_促销和优惠
+
+- story: 订单状态查询故事
+  steps:
+  - intent: 订单状态查询
+  - action: utter_订单状态查询
+
+- story: 产品比较故事
+  steps:
+  - intent: 产品比较查询
+  - action: utter_产品比较查询
+
+- story: 技术支持故事
+  steps:
+  - intent: 技术支持查询
+  - action: utter_技术支持查询
+
+- story: 产品价格查询故事
+  steps:
+  - intent: 产品价格查询查询
+  - action: utter_产品价格查询
+
+- story: 产品功能和特点故事
+  steps:
+  - intent: 产品功能和特点
+  - action: utter_产品功能和特点
+
+- story: 产品比较和竞争优势故事
+  steps:
+  - intent: 产品比较和竞争优势
+  - action: utter_产品比较和竞争优势
+
+- story: 新产品发布和未来计划故事
+  steps:
+  - intent: 新产品发布和未来计划
+  - action: utter_新产品发布和未来计划
