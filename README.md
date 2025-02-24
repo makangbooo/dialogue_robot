@@ -112,7 +112,7 @@ daemonize = /mkb/mkbDjangoTest/medical_project/script/uwsgi.log
 
 ## 4、ssl证书
 
-```shel
+```shell
     server {
         listen       3000 ssl;
         http2 on;
@@ -140,5 +140,15 @@ openssl rsa -in /home/xjus/mkbssl/private.key -out /home/xjus/mkbssl/private_no_
 /Users/makangbo/code/privateCode/chat_xjuSpeech/chat_xju_speech
 ```
 
-
+## 5、react（NextJS）
+```shell
+# 安装nvm & nodejs：V20.18
+nvm install 20.18
+# 改国内镜像源
+npm config set registry https://registry.npmmirror.com
+# 安装
+npm install
+# 运行调试（npx）
+npx next dev
+```
 
